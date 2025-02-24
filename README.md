@@ -1,8 +1,8 @@
-Spam Email Detector
+**Spam Email Detector**
 
 This project is a spam email detection system built using a machine learning model. It includes a Flask-based backend API and a simple frontend to interact with the system.
 
-Features
+**Features**
 
 Detects spam emails using a trained ML model
 
@@ -12,7 +12,7 @@ Frontend UI for user-friendly email input
 
 Lightweight and easy to deploy
 
-Installation & Setup
+**Installation & Setup**
 
 Create and Activate Virtual Environment
 python -m venv venv     # Create virtual environment
@@ -27,7 +27,7 @@ pip install scikit-learn pandas numpy
 Install Serialization and Model Handling
 pip install joblib
 
-Install Chrome Extension Development Dependencies
+**Install Chrome Extension Development Dependencies**
 pip install flask-cors
 
 
@@ -50,7 +50,7 @@ Example Response
   "prediction": "spam"
 }
 
-Troubleshooting
+**Troubleshooting**
 
 1. Virtual Environment Not Found
 
