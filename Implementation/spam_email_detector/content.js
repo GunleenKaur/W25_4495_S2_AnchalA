@@ -2,7 +2,7 @@ console.log("Spam Email Detector - Gmail Scanner Loaded");
 
 // Function to scan emails
 function scanEmails() {
-    let emails = document.querySelectorAll('.zA'); // Gmail email elements
+    let emails = document.querySelectorAll('.zA'); // Gmail email elements 
 
     emails.forEach(email => {
         let subjectElement = email.querySelector('.bog');
