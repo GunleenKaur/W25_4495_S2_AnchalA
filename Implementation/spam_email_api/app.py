@@ -21,4 +21,4 @@ def predict():
     return jsonify({'is_spam': bool(prediction)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
