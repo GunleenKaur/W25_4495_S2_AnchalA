@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Spam Detection",
+  "version": "1.0",
+  "description": "Detect and classify spam emails in Gmail.",
+  "permissions": [
+    "identity",
+    "identity.email",
+    "storage",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+  "oauth2": {
+    "client_id": "75038547456-2rh2q6gt1o5hgmq50887i90qa3m8ht32.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://www.googleapis.com/auth/gmail.modify",
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile",
+      "openid"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://www.googleapis.com/*"
+  ]
+}
