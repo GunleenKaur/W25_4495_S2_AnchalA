@@ -1,81 +1,35 @@
-**Spam Email Detector**
+# Spam Email Detector: Chrome Extension with Python Backend
 
-This project is a spam email detection system built using a machine learning model. It includes a Flask-based backend API and a simple frontend to interact with the system.
+This project is a browser-based spam email detection system that integrates directly into Gmail using a Chrome extension. It uses machine learning models to classify emails as spam or not spam, powered by a Python FastAPI backend and trained on the Enron dataset.
 
-**Features**
+---
 
-Detects spam emails using a trained ML model
+##  Features
 
-REST API for classification
+- Real-time spam detection in Gmail
+- Machine Learning-based classification using Naive Bayes and XGBoost
+- Chrome Extension UI for easy interaction
+- FastAPI backend with database integration
+- Trained on real-world Enron email dataset
 
-Frontend UI for user-friendly email input
+---
 
-Lightweight and easy to deploy
+## System Architecture
 
-**Installation & Setup**
+```text
+Gmail → Chrome Extension → Backend API (FastAPI) → ML Model → Result → UI Display
 
-Create and Activate Virtual Environment
-python -m venv venv     # Create virtual environment
-venv\Scripts\activate     # Activate on Windows
+## Backend (FastAPI)
 
-Install Flask for Backend API
-pip install flask
-
-Install Machine Learning Libraries
-pip install scikit-learn pandas numpy
-
-Install Serialization and Model Handling
-pip install joblib
-
-**Install Chrome Extension Development Dependencies**
-pip install flask-cors
-
-
-After installing these, you can run the Flask server:
-
-python app.py
-
-
-Takes an email text and returns whether it is spam or not
-
-Example Request
-
-{
-  "email": "Congratulations! You have won a free lottery. Click here to claim."
-}
-
-Example Response
-
-{
-  "prediction": "spam"
-}
-
-**Troubleshooting**
-
-1. Virtual Environment Not Found
-
-Ensure you are in the correct directory and run:
-
+cd backend
 python -m venv venv
-venv\Scripts\activate  # For Windows
-source venv/bin/activate  # For macOS/Linux
+venv\Scripts\activate  # On Windows
+pip install -r requirements.txt
+python -m uvicorn src.Backend:app --reload --port 9005
 
-2. Scikit-Learn Import Error
 
-If you see an error like No module named 'sklearn.__check_build._check_build', run:
-
-pip install --no-cache-dir --upgrade scikit-learn
-
-3. Flask Server Not Starting
-
-Ensure all dependencies are installed: pip install -r requirements.txt
-
-Run python app.py from the backend folder
-
-Future Improvements
-
-Add email attachments processing
-
-Implement deep learning-based spam detection
-
-Improve UI design
+## Chrome Extension
+1.	Go to chrome://extensions
+2.	Enable "Developer Mode"
+3.	Click "Load unpacked" and select the extension/ folder
+4.	Open Gmail – the extension will scan the email content automatically
